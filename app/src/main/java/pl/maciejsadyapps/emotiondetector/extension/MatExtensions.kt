@@ -52,7 +52,7 @@ fun Mat.to4DArray(): Array<Array<Array<FloatArray>>> {
     val result = Array(64) { Array(64) { floatArrayOf() } }
     for (column in 0..63) {
         for (row in 0..63) {
-            result[column][row] = floatArrayOf(get(row, column)[0].toFloat())
+            result[row][column] = floatArrayOf(get(row, column)[0].toFloat())
         }
     }
     return arrayOf(result)
